@@ -1,6 +1,6 @@
 import CategoryList from "../../components/CategoryList/CategoryList.component";
 
-import SignUpForm from "../../components/sign-up-form/sign-up-form.component";
+import SignUpForm from "../../components/Sign-up-form/sign-up-form.component";
 
 const Home = () => {
   const categories = [
