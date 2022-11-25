@@ -6,6 +6,7 @@ import SignIn from "./routes/signin/signin.component";
 import Register from "./routes/register/register.component";
 import Reset from "./routes/reset-password/reset.component";
 import Dashboard from "./routes/dashboard/dashboard.component";
+import Autentication from "./routes/authentication/authentication.component";
 
 const Shop = () => {
   return <h1>I am the shop</h1>;
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="register" element={<Register />} />
         <Route path="reset" element={<Reset />} />
         <Route path="dashboard" element={<Dashboard />} />
+        <Route path="auth" element={<Autentication />} />
       </Route>
     </Routes>
   );

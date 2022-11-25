@@ -1,7 +1,5 @@
 import CategoryList from "../../components/CategoryList/CategoryList.component";
 
-import SignUpForm from "../../components/Sign-up-form/sign-up-form.component";
-
 const Home = () => {
   const categories = [
     {
@@ -34,7 +32,6 @@ const Home = () => {
   return (
     <>
       <CategoryList categories={categories} />
-      <SignUpForm />
     </>
   );
 };
