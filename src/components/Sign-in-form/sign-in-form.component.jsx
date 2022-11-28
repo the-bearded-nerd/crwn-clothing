@@ -19,6 +19,10 @@ const SignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
 
+  const resetFormFields = () => {
+    setFormFields(defaultFormFields);
+  };
+
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormFields({ ...formFields, [name]: value });
@@ -27,6 +31,7 @@ const SignInForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     await logInWithEmailAndPassword(email, password);
+    resetFormFields();
   };
 
   return (
