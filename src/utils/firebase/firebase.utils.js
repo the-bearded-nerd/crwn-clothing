@@ -7,6 +7,7 @@ import {
   createUserWithEmailAndPassword,
   sendPasswordResetEmail,
   signOut,
+  onAuthStateChanged,
 } from "firebase/auth";
 
 import {
@@ -93,6 +94,10 @@ const logout = () => {
   signOut(auth);
 };
 
+const handleAuthStateChange = (callback) => {
+  onAuthStateChanged(auth, callback);
+};
+
 export {
   auth,
   db,
@@ -101,4 +106,5 @@ export {
   registerWithEmailAndPassword,
   sendPasswordReset,
   logout,
+  handleAuthStateChange,
 };
