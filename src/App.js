@@ -7,10 +7,7 @@ import Register from "./routes/register/register.component";
 import Reset from "./routes/reset-password/reset.component";
 import Dashboard from "./routes/dashboard/dashboard.component";
 import Autentication from "./routes/authentication/authentication.component";
-
-const Shop = () => {
-  return <h1>I am the shop</h1>;
-};
+import Shop from "./routes/shop/shop.component";
 
 const App = () => {
   return (
