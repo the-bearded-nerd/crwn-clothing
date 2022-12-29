@@ -37,7 +37,7 @@ export const Quantity = styled.span`
     margin: 0 10px;
   }
 `;
-export const RemoveButton = styled.div`
+export const ClearButton = styled.div`
   padding-left: 12px;
   cursor: pointer;
 `;

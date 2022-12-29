@@ -6,17 +6,17 @@ import {
   CheckoutItemContainer,
   ImageContainer,
   Quantity,
-  RemoveButton,
+  ClearButton,
 } from "./checkout-item.styles";
 
 const CheckoutItem = ({ cartItem }) => {
-  const { removeItemFromCart, incItemCount, decItemCount } =
+  const { removeItemFromCart, addItemToCart, clearItemFromCart } =
     useContext(CartContext);
   const { name, imageUrl, price, quantity } = cartItem;
 
-  const removeItemFromCartHandler = () => removeItemFromCart(cartItem);
-  const incItemQuantityHandler = () => incItemCount(cartItem);
-  const decItemQuantityHandler = () => decItemCount(cartItem);
+  const clearItemFromCartHandler = () => clearItemFromCart(cartItem);
+  const incItemQuantityHandler = () => addItemToCart(cartItem);
+  const decItemQuantityHandler = () => removeItemFromCart(cartItem);
 
   return (
     <CheckoutItemContainer>
@@ -30,7 +30,7 @@ const CheckoutItem = ({ cartItem }) => {
         <div onClick={incItemQuantityHandler}>&#10095; </div>
       </Quantity>
       <span>{price}</span>
-      <RemoveButton onClick={removeItemFromCartHandler}>&#10005;</RemoveButton>
+      <ClearButton onClick={clearItemFromCartHandler}>&#10005;</ClearButton>
     </CheckoutItemContainer>
   );
 };
