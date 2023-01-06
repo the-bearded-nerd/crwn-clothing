@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
 import CateroryPreview from "../../components/Category-preview/category-preview.component";
@@ -11,8 +10,6 @@ import {
 const CategoriesPreview = () => {
   const categoriesMap = useSelector(selectCategoriesMap);
   const isLoading = useSelector(selectCategoriesIsLoading);
-  console.log(isLoading);
-  console.log(selectCategoriesMap);
   return (
     <>
       {isLoading ? (

@@ -5,7 +5,7 @@ import {
   addItemToCart,
   removeItemFromCart,
   clearItemFromCart,
-} from "../../store/cart/cart.action";
+} from "../../store/cart/cart.slice";
 
 import {
   CheckoutItemContainer,

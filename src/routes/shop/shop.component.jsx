@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 
 import CategoriesPreview from "../categories-preview/categories-preview.component";
 import Category from "../category/category.component";
-import { fetchCategoriesAsync } from "../../store/categories/categories.action";
+import { fetchCategoriesAsync } from "../../store/categories/categories.slice";
 
 const Shop = () => {
   const dispatch = useDispatch();
